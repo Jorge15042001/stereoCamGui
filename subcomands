@@ -1,0 +1,13 @@
+      {"capture", "Capture images with uncalibrated stereo cameras"},
+      {"calibration", "Perform image rectification and stereo calibration from "
+                      "a set of images"},
+      {"liveview", "Live view (record all frames)"},
+      {"fisheye_calibration",
+       "Perform image rectification and stereo calibration from set of images "
+       "for fisheye cameras"},
+      {"shutter", "Live view with rectification and shutter functionality"},
+      {"rotation", "Live view rotation, estimate the camera position, "
+                   "chessboard pattern must appear in frame"},
+      {"rectify", "rectify images"},
+      {"depth", "Compute depth data for image list"}
+
