@@ -17,10 +17,12 @@ public:
   void waitUntilFinished();
 
   std::function<void(const std::string &)> onProgramLog;
-  std::function<void(const std::string &)> onProgramError;
+  static CommandRunner &get() {
+    static CommandRunner mInstance;
+    return mInstance;
+  }
 
 private:
-  std::string command;
   std::thread workingThread;
   std::thread stdOUtThred;
   std::thread stdErrThread;
@@ -28,7 +30,7 @@ private:
   bool running;
   bool stopRequested;
 
-  void executeCommand(bool wait);
+  void executeCommand(const std::string &command);
 };
 
 #endif // COMMAND_RUNNER_HP
